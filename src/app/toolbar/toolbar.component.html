@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button>
-        <mat-icon matBadge="15" matBadgeColor="warn" aria-label="">home</mat-icon>
+    <button routerLink="/" mat-icon-button>
+        <mat-icon matBadge="15" matBadgeColor="warn" aria-label="">
+            home
+        </mat-icon>
     </button>
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
@@ -55,6 +57,8 @@
         <button mat-menu-item disabled>Velociraptor</button>
     </mat-menu>
     <span class="example-fill-remaining-space"></span>
-    <button mat-button>About</button>
+    <button mat-button routerLink="/examples">
+        Examples
+    </button>
     <button mat-button>Close</button>
 </mat-toolbar>

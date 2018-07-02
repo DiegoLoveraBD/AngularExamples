@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -43,13 +44,27 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { ExamplesComponent } from './examples/examples.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ExamplesComponent,
+    LandingComponent
   ],
   imports: [
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: LandingComponent
+      },
+      {
+        path:'examples',
+        component: ExamplesComponent
+      }
+    ]),
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
