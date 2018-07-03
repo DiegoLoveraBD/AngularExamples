@@ -46,6 +46,7 @@ import {
 } from '@angular/material';
 import { ExamplesComponent } from './examples/examples.component';
 import { LandingComponent } from './landing/landing.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -61,11 +62,12 @@ import { LandingComponent } from './landing/landing.component';
         component: LandingComponent
       },
       {
-        path:'examples',
+        path: 'examples',
         component: ExamplesComponent
       }
     ]),
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,

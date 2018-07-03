@@ -1,0 +1,5 @@
+.container-style {
+    /*This margin is for the navbar space so it doesnt collides with the content*/
+    margin-top: 65px; 
+    width: 100%;
+}
